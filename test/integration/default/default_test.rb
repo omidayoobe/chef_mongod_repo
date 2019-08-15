@@ -17,6 +17,7 @@ end
 
 describe package "mongodb-org" do
   it { should be_installed }
+  # it {should be_installed.with_version('3.x.x')}
   its('version') { should match /3\./}
 end
 

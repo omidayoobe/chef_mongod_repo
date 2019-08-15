@@ -36,6 +36,14 @@ describe 'mongo::default' do
     it 'should create a mongod.conf template in /etc/systemd/system/mongod.service' do
       expect(chef_run).to create_template('/etc/systemd/system/mongod.service')
         end
+    # 
+    # it 'should create a symlink of mongod.conf to /etc/mongod.conf' do
+    #   expect(chef_run).to create_link('/etc/mongod.conf').with_link_type(:symbolic)
+    #   end
+    #
+    # it 'should create a symlink of mongod.service to /etc/systemd/system/mongod.service' do
+    #   expect(chef_run).to create_link('/etc/systemd/system/mongod.service').with_link_type(:symbolic)
+    #   end
 
 
 

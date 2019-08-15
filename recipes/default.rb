@@ -50,5 +50,15 @@ package 'mongodb-org' do
 end
 
 service 'mongod' do
+   #supports status: true, start: true, restart: true, reload: true, enabled: true, install: true
   action [:enable, :start]
 end
+
+# link '/lib/mongod.conf' do
+#   to '/etc/mongod.conf'
+# end
+#
+#
+# link '/lib/systemd/system/mongod.service' do
+#   to '/etc/systemd/system/mongod.service'
+# end
