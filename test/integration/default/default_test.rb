@@ -14,3 +14,14 @@ end
 describe port(80), :skip do
   it { should_not be_listening }
 end
+
+describe package "mongodb-org" do
+  it { should be_installed }
+  its('version') { should match /3\./}
+end
+
+describe service "mongod" do
+  it { should be_installed }
+  it { should be_enabled }
+  it { should be_running}
+end
